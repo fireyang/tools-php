@@ -1,0 +1,29 @@
+<div id="appheader">
+    <div style="position: absolute; height: 83px; width: 188px; cursor: pointer;" id="appheaderlogo" >
+    </div>
+    <div style="float: right;" id="topnav">
+    </div>
+    <div style="float: right; clear: right; padding-top: 7px;">
+    </div>
+    <div id="searchbox">
+            <form action="" onsubmit="control.updateListFilter(); return false;">
+			    <div id="searchboxwrap">
+	            	<table>
+			        <tbody>
+			        <tr>
+				        <td style="width: 1px;">
+				        <div id="searchicon">
+				        </div>
+				        </td>
+				        <td>
+				        <input type="text" id="listFilter" onfocus="this.select();"/>
+				        </td>
+			        </tr>
+			        </tbody>
+			        </table>
+		        </div>
+	            <div id="searchtogglewrap"><a onclick="tasksView.toggleSearchOptions(); return false;" href="#" id="searchtoggle">Show search options</a></div>
+            </form>
+        </div>
+</div>
+<div id="break"></div>

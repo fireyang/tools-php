@@ -1,0 +1,273 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from file: Revision: 7945 /app/webroot/test.php
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2008-12-29 11:27+0800\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: /controllers/cards_controller.php:14
+msgid "Invalid Card."
+msgstr ""
+
+#: /controllers/cards_controller.php:26
+msgid "The file is too big"
+msgstr ""
+
+#: /controllers/cards_controller.php:42
+msgid "Possible file upload attack!"
+msgstr ""
+
+#: /controllers/cards_controller.php:49;68
+msgid "The Card has been saved"
+msgstr ""
+
+#: /controllers/cards_controller.php:52;71
+msgid "The Card could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/cards_controller.php:63
+msgid "Invalid Card"
+msgstr ""
+
+#: /controllers/cards_controller.php:83
+msgid "Invalid id for Card"
+msgstr ""
+
+#: /controllers/cards_controller.php:93
+msgid "Card deleted"
+msgstr ""
+
+#: /controllers/tasks_controller.php:14
+msgid "Invalid Task."
+msgstr ""
+
+#: /controllers/tasks_controller.php:24;44
+msgid "The Task has been saved"
+msgstr ""
+
+#: /controllers/tasks_controller.php:27;47
+msgid "The Task could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/tasks_controller.php:39
+msgid "Invalid Task"
+msgstr ""
+
+#: /controllers/tasks_controller.php:62
+msgid "Invalid id for Task"
+msgstr ""
+
+#: /controllers/tasks_controller.php:66
+msgid "Task deleted"
+msgstr ""
+
+#: /controllers/users_controller.php:14
+msgid "Invalid User."
+msgstr ""
+
+#: /controllers/users_controller.php:24;39
+msgid "The User has been saved"
+msgstr ""
+
+#: /controllers/users_controller.php:27;42
+msgid "The User could not be saved. Please, try again."
+msgstr ""
+
+#: /controllers/users_controller.php:34
+msgid "Invalid User"
+msgstr ""
+
+#: /controllers/users_controller.php:52
+msgid "Invalid id for User"
+msgstr ""
+
+#: /controllers/users_controller.php:56
+msgid "User deleted"
+msgstr ""
+
+#: /views/cards/add.ctp:3
+msgid "Add Card"
+msgstr ""
+
+#: /views/cards/add.ctp:15
+#: /views/cards/edit.ctp:20
+#: /views/cards/view.ctp:57
+msgid "List Cards"
+msgstr ""
+
+#: /views/cards/add.ctp:16
+#: /views/cards/edit.ctp:21
+#: /views/cards/index.ctp:55
+#: /views/cards/view.ctp:59
+#: /views/users/add.ctp:17
+#: /views/users/edit.ctp:19
+#: /views/users/view.ctp:50
+msgid "List Users"
+msgstr ""
+
+#: /views/cards/add.ctp:17
+#: /views/cards/edit.ctp:22
+#: /views/cards/index.ctp:56
+#: /views/cards/view.ctp:60
+#: /views/users/index.ctp:70
+#: /views/users/view.ctp:51
+msgid "New User"
+msgstr ""
+
+#: /views/cards/edit.ctp:4
+#: /views/cards/view.ctp:55
+msgid "Edit Card"
+msgstr ""
+
+#: /views/cards/edit.ctp:19
+#: /views/cards/index.ctp:40
+#: /views/users/edit.ctp:18
+#: /views/users/index.ctp:57
+msgid "Delete"
+msgstr ""
+
+#: /views/cards/edit.ctp:19
+#: /views/cards/index.ctp:40
+#: /views/cards/view.ctp:56
+#: /views/users/edit.ctp:18
+#: /views/users/index.ctp:57
+#: /views/users/view.ctp:49
+msgid "Are you sure you want to delete # %s?"
+msgstr ""
+
+#: /views/cards/index.ctp:2
+msgid "Cards"
+msgstr ""
+
+#: /views/cards/index.ctp:6
+#: /views/users/index.ctp:6
+msgid "Page %page% of %pages%, showing %current% records out of %count% total, starting on record %start%, ending on %end%"
+msgstr ""
+
+#: /views/cards/index.ctp:38
+#: /views/users/index.ctp:55
+msgid "View"
+msgstr ""
+
+#: /views/cards/index.ctp:39
+#: /views/users/index.ctp:56
+msgid "Edit"
+msgstr ""
+
+#: /views/cards/index.ctp:48
+#: /views/users/index.ctp:64
+msgid "previous"
+msgstr ""
+
+#: /views/cards/index.ctp:50
+#: /views/users/index.ctp:66
+msgid "next"
+msgstr ""
+
+#: /views/cards/index.ctp:54
+#: /views/cards/view.ctp:58
+msgid "New Card"
+msgstr ""
+
+#: /views/cards/view.ctp:2
+msgid "Card"
+msgstr ""
+
+#: /views/cards/view.ctp:4
+#: /views/users/view.ctp:4
+msgid "Id"
+msgstr ""
+
+#: /views/cards/view.ctp:9
+msgid "Name"
+msgstr ""
+
+#: /views/cards/view.ctp:14
+msgid "Header"
+msgstr ""
+
+#: /views/cards/view.ctp:21
+#: /views/users/view.ctp:19
+msgid "Display Name"
+msgstr ""
+
+#: /views/cards/view.ctp:26
+#: /views/users/view.ctp:24
+msgid "Email"
+msgstr ""
+
+#: /views/cards/view.ctp:31
+msgid "Mobile"
+msgstr ""
+
+#: /views/cards/view.ctp:36
+#: /views/users/view.ctp:2
+msgid "User"
+msgstr ""
+
+#: /views/cards/view.ctp:41
+#: /views/users/view.ctp:34
+msgid "Created"
+msgstr ""
+
+#: /views/cards/view.ctp:46
+#: /views/users/view.ctp:39
+msgid "Updated"
+msgstr ""
+
+#: /views/cards/view.ctp:56
+msgid "Delete Card"
+msgstr ""
+
+#: /views/layouts/default.ctp:6
+#: /views/layouts/login.ctp:6
+msgid "CakePHP: the rapid development php framework:"
+msgstr ""
+
+#: /views/users/add.ctp:4
+msgid "Add User"
+msgstr ""
+
+#: /views/users/edit.ctp:4
+#: /views/users/view.ctp:48
+msgid "Edit User"
+msgstr ""
+
+#: /views/users/index.ctp:2
+msgid "Users"
+msgstr ""
+
+#: /views/users/index.ctp:19
+msgid "Actions"
+msgstr ""
+
+#: /views/users/view.ctp:9
+msgid "Username"
+msgstr ""
+
+#: /views/users/view.ctp:14
+msgid "Password"
+msgstr ""
+
+#: /views/users/view.ctp:29
+msgid "Status"
+msgstr ""
+
+#: /views/users/view.ctp:49
+msgid "Delete User"
+msgstr ""
+
+#: /webroot/test.php:99
+msgid "Debug setting does not allow access to this url."
+msgstr ""
+

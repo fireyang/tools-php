@@ -1,0 +1,99 @@
+<?php
+class CardsController extends AppController {
+
+	var $name = 'Cards';
+	var $helpers = array('Html', 'Form');
+
+	function index() {
+		$this->Card->recursive = 0;
+		$this->set('cards', $this->paginate());
+	}
+
+	function view($id = null) {
+		if (!$id) {
+			$this->Session->setFlash(__('Invalid Card.', true));
+			$this->redirect(array('action'=>'index'));
+		}
+		$card = $this->Card->read(null, $id);
+		$card['Card']['header']="/img/upload/".$card['Card']['header'];
+		$this->set('card', $card );
+	}
+
+	function add() {
+		if (!empty($this->data)) {
+		    //debug($this->data['Card']['header']['size']);
+		    if($this->data['Card']['header']['size']>1000000){
+		        $this->Session->setFlash(__('The file is too big', true));
+		    }else{
+		        //debug($this->data['Card']['header']);
+		        $isUpload = true;
+		        if($this->data['Card']['header']['error']==4){ 
+		            $this->data['Card']['header'] = "null.png";
+		        }else{ 
+		            App::import('Vendor', 'common');
+		            $uploaddir  = Configure::read('FilePath');
+		            $upfile = $this->data['Card']['header'];
+		            $filename = proRandName().".".getFileTypeFromFILES($upfile['name']);
+		            $this->data['Card']['header'] = $filename;
+                    $uploadfile = $uploaddir . basename($filename);
+                    $user = $this->Session->read('User');
+                    $this->data['Card']['author'] = $user['id'];
+                    if (!move_uploaded_file($upfile['tmp_name'], $uploadfile)) {
+                        $this->Session->setFlash(__('Possible file upload attack!', true));
+                        $isUpload = false;
+                    }
+			    }
+			    if($isUpload){
+			        $this->Card->create();
+			        if ($this->Card->save($this->data)) {
+                            $this->Session->setFlash(__('The Card has been saved', true));
+                            $this->redirect(array('action'=>'index'));
+			        } else {
+				        $this->Session->setFlash(__('The Card could not be saved. Please, try again.', true));
+			        }
+			    }
+			}
+		}
+		//$users = $this->Card->User->find('list');
+		//$this->set(compact('users'));
+	}
+
+	function edit($id = null) {
+		if (!$id && empty($this->data)) {
+			$this->Session->setFlash(__('Invalid Card', true));
+			$this->redirect(array('action'=>'index'));
+		}
+		if (!empty($this->data)) {
+			if ($this->Card->save($this->data)) {
+				$this->Session->setFlash(__('The Card has been saved', true));
+				$this->redirect(array('action'=>'index'));
+			} else {
+				$this->Session->setFlash(__('The Card could not be saved. Please, try again.', true));
+			}
+		}
+		if (empty($this->data)) {
+			$this->data = $this->Card->read(null, $id);
+		}
+		$users = $this->Card->User->find('list');
+		$this->set(compact('users'));
+	}
+
+	function delete($id = null) {
+		if (!$id) {
+			$this->Session->setFlash(__('Invalid id for Card', true));
+			$this->redirect(array('action'=>'index'));
+		}
+		$card = $this->Card->read(null, $id);
+		$uploaddir  = Configure::read('FilePath');
+		$file = $uploaddir.$card['Card']['header'];
+		if ($this->Card->del($id)) {
+		    if(is_file($file)){ 
+		        unlink($file);
+		    }
+			$this->Session->setFlash(__('Card deleted', true));
+			$this->redirect(array('action'=>'index'));
+		}
+	}
+
+}
+?>

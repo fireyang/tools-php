@@ -1,0 +1,8 @@
+<div id="login">
+<?php $session->flash(); ?>
+            <?php $session->flash(); ?>
+<?php echo $form->create('User',array('action'=>'login'));?>  
+	    <?php echo $form->input('User.username',array('type'=>'text','label'=>'用户名:','class'=>'field'));?>
+		<?php echo $form->input('User.password',array('type'=>'password','label'=>'密  码:','class'=>'field'));?>
+<?php echo $form->end('登  录');?>
+</div>
